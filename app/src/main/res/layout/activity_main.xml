@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:cardCornerRadius="30sp"
+        android:id="@+id/cvMain"
+        android:backgroundTint="#271842">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="40sp"
+                android:layout_height="30sp"
+                android:src="@drawable/baseline_keyboard_backspace_24"
+                app:tint="@color/white"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="160dp"
+                    android:id="@+id/tvSignUp"
+                    android:textSize="20sp"
+                    android:text="Sign Up"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:layout_alignStart="@id/tvSignUp"
+                    android:layout_marginTop="160dp"
+                    android:layout_marginStart="90dp"
+                    android:id="@+id/tvSignIn"
+                    android:text="Sign In"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.fragment.app.FragmentContainerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_alignTop="@id/cvMain"
+        android:layout_marginTop="200dp"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:navGraph="@navigation/nav_graph"
+        android:id="@+id/navController"
+        app:defaultNavHost="true"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="#271842"
+        app:cardCornerRadius="20sp">
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
